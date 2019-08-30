@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="Grigoryan-Hulyan.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<style>
+
+body{
+    text-align:center;
+    top:200px;
+    font-family: VostanSans, VostanGrapalat;
+
+
+}
+
+#grig_input{
+
+    border-color: #666666;
+    padding: 2px 10px;
+    border-radius: 17px;
+
+}
+
+#title{
+
+    margin-top: 2px;
+    color: #369;
+
+
+
+}
+
+
+#hulyan{
+    font-size: 20px;
+    color: #369;
+}
+
+.text{
+
+    font-size: 30px;
+    color: #adb2bb;
+}
+
+.calendar
+{
+
+}
+
+
+</style>
+</head>
+ <body>
+ 
+    <div class="container">
+        <div class="row text-center">
+            <h1 id="title" class="col-md-12 col-sm-12 ">Տոմարային փոխարկիչ</h1>
+
+            <div class="col-md-12 col-sm-12">
+                <p class="text">Գրիգորեան տոմար</p>
+                <label for="grig_input">
+                    <span class="calendar fa fa-calendar mr-1"></span><input id="grig_input" type="date">
+                </label>
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <p class="text" >Յուլեան տոմար</p>
+                <span id="tvar"></span><span id="hulyan"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+    <script>
+
+        document.getElementById("grig_input").addEventListener("input", function(e) {
+            var t = e.target.value;
+            var gt = new Date(t);
+            ht = gt;
+            ht.setDate(gt.getDate() + 11);
+            document.getElementById("hulyan").innerHTML = ht.toLocaleString();
+            document.getElementById("tvar").classList.add("fa", "fa-calendar", "mr-1");
+
+
+        });
+
+    </script>
